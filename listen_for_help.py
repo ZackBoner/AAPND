@@ -2,11 +2,13 @@
 """
 Created on Tue Oct 29 17:33:17 2019
 
-@author: Zachery Boner
+@author: boner
 """
 
 import speech_recognition as sr
 import sys
+import datetime
+import geocoder
 
 r = sr.Recognizer()
 mic = sr.Microphone()
@@ -70,7 +72,13 @@ def listen_for_phrase(source):
     return text
 
 def call_the_police(text):
-    print("\n\nDangerous word detected!: {}\n".format(text))
+    print("\n\nDangerous word detected!: {}".format(text))
+    print(datetime.datetime.now())
+    g = geocoder.ip('me')
+    print("latlon: ",g.latlng)
+    print()
+    
+    
 
 # identifies words in the dangerous_words_list
 # Params:
