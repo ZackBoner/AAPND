@@ -2,7 +2,7 @@
 """
 Created on Tue Oct 29 17:33:17 2019
 
-@author: boner
+@author: Zachery Boner
 """
 
 import speech_recognition as sr
